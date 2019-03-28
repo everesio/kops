@@ -67,9 +67,9 @@ EOF
 # --force-confold prevents prompt for replacement of daemon.json
 apt-get -y update
 apt-get install -y --allow-downgrades -o Dpkg::Options::="--force-confold" \
-  nvidia-docker2 \
-  nvidia-container-runtime \
-  docker-ce
+  nvidia-docker2=2.0.3+docker17.03.2-1 \
+  nvidia-container-runtime=2.0.0+docker17.03.2-1 \
+  docker-ce=17.03.2~ce-0~debian-stretch
 
 # Disable a few things that break docker-ce/gpu support upon reboot:
 #  Upon boot, the kops-configuration.service systemd unit sets up and starts

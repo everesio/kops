@@ -19,10 +19,10 @@ all: image
 .PHONY: image push
 
 image:  ## Build the image
-	docker build -t dcwangmit01/nvidia-device-plugin:0.1.0 -f image/Dockerfile image/
+	docker build -t everesio/nvidia-device-plugin:0.1.0-issues-6324 -f image/Dockerfile image/
 
 push:   ## Push the image
-	docker push dcwangmit01/nvidia-device-plugin:0.1.0
+	docker push everesio/nvidia-device-plugin:0.1.0-issues-6324
 
 help:   ## Print list of Makefile targets
 	@# Taken from https://github.com/spf13/hugo/blob/master/Makefile
